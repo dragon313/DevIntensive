@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.softdisign.devintensive.R;
+import com.softdisign.devintensive.utils.ConstantManager;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = "Main Activity";
+    public static final String TAG = ConstantManager.TAG_PREFIX + "Main Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
