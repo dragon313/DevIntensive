@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Александр Вдовенков</string>
+    <string name="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nunc tristique eros at viverra sagittis. Nulla facilisi. Nulla nisi sem, facilisis at
+        libero ut, lobortis pretium sem. Aliquam pretium, ex a mollis pharetra, velit eros
+        ultricies nisi, ac luctus neque eros ac mauris. Sed maximus, erat vitae facilisis semper,
+        velit orci pretium dolor, a consequat ligula diam ut eros. Vestibulum bibendum nisi ac
+        finibus aliquet. Nunc nec fermentum augue.</string>
 </resources>
