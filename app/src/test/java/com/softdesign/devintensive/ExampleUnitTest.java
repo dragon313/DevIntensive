@@ -1,4 +1,4 @@
-package com.softdisign.devintensive;
+package com.softdesign.devintensive;
 
 import org.junit.Test;
 
