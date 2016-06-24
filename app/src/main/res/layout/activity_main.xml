@@ -10,138 +10,88 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".ui.activities.MainActivity">
-        <!--ScoreBar-->
+        <!--StatusBar-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_big_88"
-            android:background="@color/grey"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/spacing_medial_24"
-            android:paddingTop="@dimen/spacing_normal_16">
+            style="@style/statusBar">
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/spacing_medial_24"
-                android:layout_marginRight="@dimen/margin_8"
+                style="@style/relativeStatusBar"
                 android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/rating_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    style="@style/statusText"
                     android:text="5"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/font_larger_22"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/statusText"
                     android:layout_below="@+id/rating_tv"
-                    android:layout_centerHorizontal="true"
-                    android:text="Рейтинг"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_small_12"/>
+                    android:text="@string/rating"
+                    android:textSize="@dimen/font_normal_15"/>
             </RelativeLayout>
 
-            <View
-                android:layout_width="@dimen/line_size"
-                android:layout_height="match_parent"
-                android:background="@color/grey_light"/>
+            <View style="@style/verticalDivider"/>
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/margin_8"
-                android:layout_marginRight="@dimen/margin_8"
+                style="@style/relativeStatusBar"
                 android:layout_weight="2">
 
                 <TextView
                     android:id="@+id/code_string_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    style="@style/statusText"
                     android:text="5"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/font_larger_22"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/statusText"
                     android:layout_below="@+id/code_string_tv"
-                    android:layout_centerHorizontal="true"
-                    android:text="Написано строк кода"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_small_12"/>
+                    android:text="@string/code_string_counter_text"
+                    android:textSize="@dimen/font_normal_15"/>
             </RelativeLayout>
 
-            <View
-                android:layout_width="@dimen/line_size"
-                android:layout_height="match_parent"
-                android:background="@color/grey_light"/>
+            <View style="@style/verticalDivider"/>
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="@dimen/spacing_medial_24"
-                android:layout_marginLeft="@dimen/margin_8"
+                style="@style/relativeStatusBar"
                 android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/projects_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    style="@style/statusText"
                     android:text="5"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/font_larger_22"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/statusText"
                     android:layout_below="@+id/projects_tv"
-                    android:layout_centerHorizontal="true"
-                    android:text="Проектов"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_small_12"/>
+                    android:text="@string/projects"
+                    android:textSize="@dimen/font_normal_15"/>
             </RelativeLayout>
 
         </LinearLayout>
 
         <!--Mobile phone number-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_8"
-            android:layout_marginTop="@dimen/margin_8"
-            android:orientation="horizontal">
+            style="@style/main_item">
 
             <ImageView
                 style="@style/icon.left"
-                android:src="@drawable/ic_call_black_24dp"
-                />
+                android:contentDescription="@string/mobile_phone"
+                android:src="@drawable/ic_call_black_24dp"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="@dimen/size_large_72"
-                android:layout_marginLeft="@dimen/margin_32"
-                android:layout_marginRight="@dimen/margin_16"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                style="@style/inner_item">
 
                 <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/textInputLayout">
 
                     <EditText
                         android:id="@+id/phone_et"
                         style="@style/editText"
                         android:enabled="false"
                         android:focusable="false"
-                        android:hint="Мобильный телефон"
+                        android:hint="@string/mobile_phone"
                         android:inputType="phone"
                         android:text="+7(910)111-22-33"
                         />
@@ -150,49 +100,35 @@
 
             <ImageView
                 style="@style/icon.right"
-                android:src="@drawable/ic_phone_in_talk_black_24dp"
-                />
+                android:contentDescription="@string/make_call"
+                android:src="@drawable/ic_phone_in_talk_black_24dp"/>
 
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:background="@color/grey_light"/>
+            style="@style/horizontalDivider"/>
 
         <!--Email-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_8"
-            android:layout_marginTop="@dimen/margin_8"
-            android:orientation="horizontal">
+            style="@style/main_item">
 
             <ImageView
                 style="@style/icon.left"
-                android:src="@drawable/ic_mail_black_24dp"
-                />
+                android:contentDescription="@string/email"
+                android:src="@drawable/ic_mail_black_24dp"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="@dimen/size_large_72"
-                android:layout_marginLeft="@dimen/margin_32"
-                android:layout_marginRight="@dimen/margin_16"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                style="@style/inner_item">
 
                 <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/textInputLayout">
 
                     <EditText
                         android:id="@+id/email_et"
                         style="@style/editText"
                         android:enabled="false"
                         android:focusable="false"
-                        android:hint="Email"
+                        android:hint="@string/email"
                         android:inputType="textEmailAddress"
                         android:text="test@test.com"/>
                 </android.support.design.widget.TextInputLayout>
@@ -200,49 +136,35 @@
 
             <ImageView
                 style="@style/icon.right"
-                android:src="@drawable/ic_send_black_24dp"
-                />
+                android:contentDescription="@string/send_email"
+                android:src="@drawable/ic_send_black_24dp"/>
 
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:background="@color/grey_light"/>
+            style="@style/horizontalDivider"/>
 
         <!--VK-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_8"
-            android:layout_marginTop="@dimen/margin_8"
-            android:orientation="horizontal">
+            style="@style/main_item">
 
             <ImageView
                 style="@style/icon.left"
-                android:src="@drawable/ic_vk_circle"
-                />
+                android:contentDescription="@string/vk"
+                android:src="@drawable/ic_vk_circle"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="@dimen/size_large_72"
-                android:layout_marginLeft="@dimen/margin_32"
-                android:layout_marginRight="@dimen/margin_16"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                style="@style/inner_item">
 
                 <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/textInputLayout">
 
                     <EditText
                         android:id="@+id/vk_et"
                         style="@style/editText"
                         android:enabled="false"
                         android:focusable="false"
-                        android:hint="Профиль в VK"
+                        android:hint="@string/vk"
                         android:inputType="textMultiLine"
                         android:text="vk.com/dragon313"
                         />
@@ -251,49 +173,35 @@
 
             <ImageView
                 style="@style/icon.right"
-                android:src="@drawable/ic_remove_red_eye_black_24dp"
-                />
+                android:contentDescription="@string/show_vk_profile"
+                android:src="@drawable/ic_remove_red_eye_black_24dp"/>
 
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:background="@color/grey_light"/>
+            style="@style/horizontalDivider"/>
 
         <!--GitHub-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_8"
-            android:layout_marginTop="@dimen/margin_8"
-            android:orientation="horizontal">
+            style="@style/main_item">
 
             <ImageView
                 style="@style/icon.left"
-                android:src="@drawable/ic_github_circle"
-                />
+                android:contentDescription="@string/repository"
+                android:src="@drawable/ic_github_circle"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="@dimen/size_large_72"
-                android:layout_marginLeft="@dimen/margin_32"
-                android:layout_marginRight="@dimen/margin_16"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                style="@style/inner_item">
 
                 <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/textInputLayout">
 
                     <EditText
                         android:id="@+id/github_et"
                         style="@style/editText"
                         android:enabled="false"
                         android:focusable="false"
-                        android:hint="Репозиторий"
+                        android:hint="@string/repository"
                         android:inputType="textMultiLine"
                         android:text="github.com/dragon313/DevIntensive"
                         />
@@ -302,58 +210,40 @@
 
             <ImageView
                 style="@style/icon.right"
-                android:src="@drawable/ic_remove_red_eye_black_24dp"
-                />
+                android:contentDescription="@string/show_repository"
+                android:src="@drawable/ic_remove_red_eye_black_24dp"/>
 
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:background="@color/grey_light"/>
+            style="@style/horizontalDivider"/>
 
         <!--About-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_8"
-            android:layout_marginTop="@dimen/margin_8"
-            android:orientation="horizontal">
+            style="@style/main_item">
 
             <ImageView
                 style="@style/icon.left"
-                android:src="@drawable/ic_account_circle_black_24dp"
-                />
+                android:contentDescription="@string/about_hint"
+                android:src="@drawable/ic_account_circle_black_24dp"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_32"
-                android:layout_marginRight="@dimen/margin_16"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                style="@style/inner_item.about">
 
                 <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/textInputLayout">
 
                     <EditText
                         android:id="@+id/about_et"
                         style="@style/editText"
                         android:enabled="false"
                         android:focusable="false"
-                        android:hint="О себе"
+                        android:hint="@string/about_hint"
                         android:inputType="textMultiLine"
                         android:text="@string/about"
                         />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
-
-            <ImageView
-                style="@style/icon.right"
-                />
         </LinearLayout>
 
     </LinearLayout>

@@ -33,4 +33,71 @@
         <item name="android:textColorHint">@color/grey</item>
     </style>
 
+    <style name="statusBar">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_height">@dimen/score_bar_size_112</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/grey</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">@dimen/spacing_half_normal_28</item>
+        <item name="android:paddingTop">@dimen/spacing_half_normal_28</item>
+        <item name="android:paddingLeft">@dimen/spacing_normal_16</item>
+        <item name="android:paddingRight">@dimen/spacing_normal_16</item>
+    </style>
+
+    <style name="statusText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="relativeStatusBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="verticalDivider">
+        <item name="android:layout_width">@dimen/line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/margin_8</item>
+        <item name="android:layout_marginRight">@dimen/margin_8</item>
+        <item name="android:background">@color/grey_light</item>
+    </style>
+
+    <style name="horizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_size</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_larger_72</item>
+        <item name="android:background">@color/grey_light</item>
+    </style>
+
+    <style name="main_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_8</item>
+        <item name="android:layout_marginTop">@dimen/margin_8</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="inner_item">
+        <item name="android:layout_height">@dimen/size_large_72</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_32</item>
+        <item name="android:layout_marginRight">@dimen/margin_16</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="inner_item.about" parent="inner_item">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="textInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>
