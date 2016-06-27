@@ -1,10 +1,12 @@
 package com.softdesign.devintensive.ui.activities;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -13,11 +15,13 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.softdesign.devintensive.R;
 import com.softdesign.devintensive.data.managers.DataManager;
 import com.softdesign.devintensive.utils.ConstantManager;
+import com.softdesign.devintensive.utils.RoundedAvatarDrawable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,17 +30,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     public static final String TAG = ConstantManager.TAG_PREFIX + "Main Activity";
 
-    private DataManager mDataManager;
-    private int mCurrentEditMode = 0;
-
     private CoordinatorLayout mCoordinatorLayout;
+    private DataManager mDataManager;
+    private EditText mUserPhone, mUserMail, mUserVK, mUserGit, mUserBio;
+    private List<EditText> mUserInfoViews;
     private Toolbar mToolbar;
     private DrawerLayout mNavigationDrawer;
     private FloatingActionButton mFab;
-    private TextView mRatingTextView, mCodeStringsTextView, mProjectsTextView;
-    private EditText mUserPhone, mUserMail, mUserVK, mUserGit, mUserBio;
+    private NavigationView mNavigationView;
+    private ImageView mUserAvatar;
+    private int mCurrentEditMode = 0;
 
-    private List<EditText> mUserInfoViews;
+    private TextView mRatingTextView, mCodeStringsTextView, mProjectsTextView;
 
 
     @Override
@@ -44,6 +49,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate");
+
+        mDataManager = DataManager.getInstance();
+
+        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.main_coordinator_container);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mNavigationDrawer = (DrawerLayout) findViewById(R.id.navigation_drawer);
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
+
+        //mUserAvatar = (ImageView) findViewById(R.id.user_rounded_avatar);
+        mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
+        mUserAvatar = (ImageView) mNavigationView.getHeaderView(0).findViewById(R.id.user_rounded_avatar);
+        mUserAvatar.setImageBitmap(
+                RoundedAvatarDrawable.getRoundedBitmap(
+                        BitmapFactory.decodeResource(getResources(),
+                                R.drawable.user_photo)));
 
         mRatingTextView = (TextView) findViewById(R.id.rating_tv);
         mCodeStringsTextView = (TextView) findViewById(R.id.code_string_tv);
@@ -61,20 +81,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mUserBio = (EditText) findViewById(R.id.about_et);
         mUserInfoViews.add(mUserBio);
 
-        mDataManager = DataManager.getInstance();
+        //TODO: Заполнить данные формы, если нечего загружать, для больей наглядности.
         loadUserInfoValue();
-
-        //TODO: Заполнить данные формы для больей наглядности.
-
-        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.main_coordinator_container);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mFab.setOnClickListener(this);
         setupToolBar();
-
-        mNavigationDrawer = (DrawerLayout) findViewById(R.id.navigation_drawer);
         setupDrawer();
 
-        mFab = (FloatingActionButton) findViewById(R.id.fab);
-        mFab.setOnClickListener(this);
 
         if (savedInstanceState == null) {
             //активность запускается впервые
@@ -145,8 +157,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onRestart();
         Log.d(TAG, "onRestart");
     }
-    /** Метод вызывается по окончании работы активности, при вызове метода finish() или в случае,
-     * * когда система уничтожает этот экземпляр активности для освобождения ресурсов. */
+
+    /**
+     * Метод вызывается по окончании работы активности, при вызове метода finish() или в случае,
+     * * когда система уничтожает этот экземпляр активности для освобождения ресурсов.
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
