@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+    <string name="app_name">Александр Вдовенков</string>
+    <string name="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nunc tristique eros at viverra sagittis. Nulla facilisi. Nulla nisi sem, facilisis at
+        libero ut, lobortis pretium sem. Aliquam pretium, ex a mollis pharetra, velit eros
+        ultricies nisi, ac luctus neque eros ac mauris. Sed maximus, erat vitae facilisis semper,
+        velit orci pretium dolor, a consequat ligula diam ut eros. Vestibulum bibendum nisi ac
+        finibus aliquet. Nunc nec fermentum augue.</string>
+    <string name="rating">Рейтинг</string>
+    <string name="code_string_counter_text">Написано строк кода</string>
+    <string name="projects">Проектов</string>
+    <string name="mobile_phone">Мобильный телефон</string>
+    <string name="email">Email</string>
+    <string name="vk">Профиль в VK</string>
+    <string name="repository">Репозиторий</string>
+    <string name="about_hint">О себе</string>
+    <string name="make_call">Позвонить</string>
+    <string name="send_email">Отправить письмо</string>
+    <string name="show_vk_profile">Показать профиль</string>
+    <string name="show_repository">Показать репозиторий</string>
 </resources>
