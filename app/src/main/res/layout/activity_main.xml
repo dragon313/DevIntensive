@@ -3,63 +3,44 @@
                                         xmlns:app="http://schemas.android.com/apk/res-auto"
                                         xmlns:tools="http://schemas.android.com/tools"
                                         android:id="@+id/navigation_drawer"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
+                                        style="@style/drawer_layout"
                                         tools:context=".ui.activities.MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
-
         android:id="@+id/main_coordinator_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        style="@style/coordinator_layout">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_primary"
+            style="@style/app_bar"
             android:theme="@style/AppTheme.AppBarOverlay">
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/collapsing_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/collapsing_toolbar"
                 app:contentScrim="@color/color_primary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <ImageView
                     android:id="@+id/user_photo_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/profile_image_size"
-                    android:fitsSystemWindows="true"
-                    android:scaleType="centerCrop"
+                    style="@style/user_photo"
                     android:src="@drawable/user_photo"/>
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
-                    android:layout_marginTop="@dimen/margin_24"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:theme="@style/AppTheme.PopupOverlay"
-                    android:titleTextColor="@color/white"
+                    style="@style/toolbar"
                     app:layout_collapseMode="pin"/>
-
 
             </android.support.design.widget.CollapsingToolbarLayout>
 
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/main_scroll_view"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                style="@style/main_scroll_view.inner_layout">
                 <!--StatusBar-->
                 <LinearLayout
                     style="@style/statusBar">
@@ -301,10 +282,8 @@
         </android.support.v4.widget.NestedScrollView>
 
         <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/fab"
-            android:layout_marginRight="@dimen/fab_right_space"
+            style="@style/fab"
             android:src="@drawable/ic_create"
             app:layout_anchor="@id/appbar_layout"
             app:layout_anchorGravity="bottom|end"/>
@@ -312,9 +291,7 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
+        style="@style/navigation_view"
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer_menu">
 

@@ -57,7 +57,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mNavigationDrawer = (DrawerLayout) findViewById(R.id.navigation_drawer);
         mFab = (FloatingActionButton) findViewById(R.id.fab);
 
-        //mUserAvatar = (ImageView) findViewById(R.id.user_rounded_avatar);
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
         mUserAvatar = (ImageView) mNavigationView.getHeaderView(0).findViewById(R.id.user_rounded_avatar);
         mUserAvatar.setImageBitmap(
@@ -81,8 +80,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mUserBio = (EditText) findViewById(R.id.about_et);
         mUserInfoViews.add(mUserBio);
 
-        //TODO: Заполнить данные формы, если нечего загружать, для больей наглядности.
-        loadUserInfoValue();
         mFab.setOnClickListener(this);
         setupToolBar();
         setupDrawer();
@@ -91,6 +88,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (savedInstanceState == null) {
             //активность запускается впервые
         } else {
+            loadUserInfoValue();
             mCurrentEditMode = savedInstanceState.getInt(ConstantManager.EDIT_MODE_KEY, 0);
             changeEditMode(mCurrentEditMode);
         }
