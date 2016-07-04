@@ -18,4 +18,6 @@
     <string name="send_email">Отправить письмо</string>
     <string name="show_vk_profile">Показать профиль</string>
     <string name="show_repository">Показать репозиторий</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="my_team">Моя команда</string>
 </resources>
