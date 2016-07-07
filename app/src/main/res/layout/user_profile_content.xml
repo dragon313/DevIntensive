@@ -1,0 +1,210 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/standard_size_mm"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        style="@style/standard_size_mm"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/stats_layout"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/stats_text.rate"
+                    android:text="@string/rate_value"/>
+
+                <TextView
+                    style="@style/stats_text"
+                    android:text="@string/rating"/>
+
+            </LinearLayout>
+
+            <View style="@style/view.vertical"/>
+
+            <LinearLayout
+                style="@style/stats_layout"
+                android:layout_weight="2">
+
+                <TextView
+                    style="@style/stats_text.rate"
+                    android:text="@string/rate_value"/>
+
+                <TextView
+                    style="@style/stats_text"
+                    android:text="@string/code_string_counter_text"/>
+
+            </LinearLayout>
+
+            <View style="@style/view.vertical"/>
+
+            <LinearLayout
+                style="@style/stats_layout"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/stats_text.rate"
+                    android:text="@string/rate_value"/>
+
+                <TextView
+                    style="@style/stats_text"
+                    android:text="@string/projects"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_call_black_24dp"/>
+
+            <LinearLayout
+                style="@style/layout_vertical.settings">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/app_text">
+
+                    <EditText
+                        android:id="@+id/mobile_et"
+                        style="@style/app_text.user"
+                        android:hint="@string/mobile_phone"
+                        android:inputType="phone"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/call_phone_user"
+                style="@style/icon.right"
+                android:src="@drawable/ic_phone_in_talk_black_24dp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/view.settings"/>
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_send_black_24dp"/>
+
+            <LinearLayout
+                style="@style/layout_vertical.settings">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/app_text">
+
+                    <EditText
+                        android:id="@+id/email_et"
+                        style="@style/app_text.user"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/send_mail_user"
+                style="@style/icon.right"
+                android:src="@drawable/ic_send_black_24dp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/view.settings"/>
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_vk"/>
+
+            <LinearLayout
+                style="@style/layout_vertical.settings">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/app_text">
+
+                    <EditText
+                        android:id="@+id/vk_et"
+                        style="@style/app_text.user"
+                        android:hint="@string/vk"
+                        android:inputType="textWebEditText"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/open_vk_user"
+                style="@style/icon.right"
+                android:src="@drawable/ic_eye"/>
+        </LinearLayout>
+
+        <View
+            style="@style/view.settings"/>
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_github"/>
+
+            <LinearLayout
+                style="@style/layout_vertical.settings">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/app_text">
+
+                    <EditText
+                        android:id="@+id/git_et"
+                        style="@style/app_text.user"
+                        android:hint="@string/repository"
+                        android:inputType="textWebEditText"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/open_git_user"
+                style="@style/icon.right"
+                android:src="@drawable/ic_eye"/>
+        </LinearLayout>
+
+        <View
+            style="@style/view.settings"/>
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_account"/>
+
+            <LinearLayout
+                style="@style/layout_vertical.settings.about">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/app_text">
+
+                    <EditText
+                        android:id="@+id/about_et"
+                        style="@style/app_text.user"
+                        android:hint="@string/about_hint"
+                        android:inputType="textMultiLine"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
