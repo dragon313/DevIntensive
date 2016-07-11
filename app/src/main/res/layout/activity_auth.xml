@@ -1,13 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.softdesign.devintensive.ui.activities.AuthActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/standard_size_mm"
+              android:background="@mipmap/login_bg"
+              android:gravity="center"
+              tools:context=".ui.activities.AuthActivity">
 
-</RelativeLayout>
+    <LinearLayout
+        style="@style/standard_size_mw"
+        android:layout_marginLeft="@dimen/spacing_larger_72"
+        android:layout_marginRight="@dimen/spacing_larger_72"
+        android:background="@drawable/shape"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/standard_size_mw"
+            android:layout_marginTop="@dimen/spacing_half_normal_28"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/line_size_3dp"
+                android:layout_height="@dimen/size_small_24"
+                android:background="@color/red_button"/>
+
+            <TextView
+                style="@style/standard_size_ww"
+                android:layout_marginLeft="@dimen/spacing_half_normal_28"
+                android:layout_marginStart="@dimen/spacing_half_normal_28"
+                android:fontFamily="sans-serif"
+                android:text="@string/sign_in"
+                android:textColor="@color/red_button"
+                android:textSize="@dimen/font_larger_22"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            style="@style/standard_size_mw"
+            android:layout_marginLeft="@dimen/spacing_half_normal_28"
+            android:layout_marginRight="@dimen/spacing_half_normal_28">
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/grey_login"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/standard_size_mw"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/spacing_half_normal_28"
+            android:layout_marginRight="@dimen/spacing_half_normal_28">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/password"
+                android:imeActionId="@+id/login"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/email_sign_in_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="@dimen/button_login_width_125"
+            android:layout_height="@dimen/button_login_height_36"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_half_normal_28"
+            android:background="@drawable/shape_button"
+            android:onClick="onProfileButton"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"/>
+
+        <TextView
+            style="@style/standard_size_ww"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/spacing_half_normal_28"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:text="@string/forget_password"
+            android:textColor="@color/grey_login"/>
+
+    </LinearLayout>
+</LinearLayout>

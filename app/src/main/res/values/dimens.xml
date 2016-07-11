@@ -10,7 +10,7 @@
     <dimen name="size_large_72">72dp</dimen>
     <dimen name="size_big_88">88dp</dimen>
     <dimen name="score_bar_size_112">112dp</dimen>
-    <dimen name="line_size">1dp</dimen>
+    <dimen name="line_size_1dp">1dp</dimen>
 
     <!--margins-->
     <dimen name="margin_8">8dp</dimen>
@@ -43,4 +43,8 @@
 
     <dimen name="fab_right_space">8dp</dimen>
     <dimen name="rounded_avatar">60dp</dimen>
+    <dimen name="line_size_3dp">3dp</dimen>
+    <dimen name="button_login_width_125">125dp</dimen>
+    <dimen name="button_login_height_36">36dp</dimen>
+    <dimen name="place_holder_photo_size_90">90dp</dimen>
 </resources>

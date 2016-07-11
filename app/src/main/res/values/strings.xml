@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">Александр Вдовенков</string>
-    <string name="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nunc tristique eros at viverra sagittis. Nulla facilisi. Nulla nisi sem, facilisis at
-        libero ut, lobortis pretium sem. Aliquam pretium, ex a mollis pharetra, velit eros
-        ultricies nisi, ac luctus neque eros ac mauris. Sed maximus, erat vitae facilisis semper,
-        velit orci pretium dolor, a consequat ligula diam ut eros. Vestibulum bibendum nisi ac
-        finibus aliquet. Nunc nec fermentum augue.</string>
     <string name="rating">Рейтинг</string>
     <string name="code_string_counter_text">Написано строк кода</string>
     <string name="projects">Проектов</string>
@@ -20,4 +14,26 @@
     <string name="show_repository">Показать репозиторий</string>
     <string name="my_profile">Мой профиль</string>
     <string name="my_team">Моя команда</string>
+    <string name="sign_in">Войти</string>
+    <string name="password">Пароль</string>
+    <string name="forget_password">Забыли пароль?</string>
+    <string name="user_profile.photo.title">Изменить фото</string>
+    <string name="rate_value">0</string>
+    <string name="user_profile.choose_message">Выберите фото</string>
+    <string name="load_foto_not_cancel_message">Для корректной работы приложения необходимо дать
+        требуемые разрешения</string>
+    <string name="allow_message">Разрешить</string>
+    <string name="user_profile.photo.gallery">Загрузить из галереи</string>
+    <string name="user_profile.photo.camera">Сделать снимок</string>
+    <string name="user_profile.photo.cancel">Отмена</string>
+    <string name="chooser_title">Выберите действие</string>
+
+
+
+    <string name="profile_phone">89107067123</string>
+    <string name="profile_mail">dragon313@mail.ru</string>
+    <string name="profile_vk">vk.com/dragon313</string>
+    <string name="profile_git">github.com/dragon313/DevIntensive</string>
+    <string name="profile_about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue bibendum sagittis. Proin in augue id dui volutpat egestas. Fusce sit amet condimentum augue. Nam risus sapien, elementum ac diam ac, condimentum fermentum mi. Donec finibus, dolor a malesuada ultrices, libero nisl vestibulum ipsum, a condimentum diam leo nec ipsum.</string>
+    <string name="email_error_text">Некорректный email(Необходим email вида xxx@xx.xx)</string>
 </resources>
