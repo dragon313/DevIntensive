@@ -47,4 +47,5 @@
     <dimen name="button_login_width_125">125dp</dimen>
     <dimen name="button_login_height_36">36dp</dimen>
     <dimen name="place_holder_photo_size_90">90dp</dimen>
+    <dimen name="spacing_56">56dp</dimen>
 </resources>
